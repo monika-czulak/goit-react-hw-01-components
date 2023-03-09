@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Statistics = ({ title, stats }) => (
   <section className="statistics">
     <h2 classNameName="title">{title}</h2>
@@ -12,5 +14,20 @@ const Statistics = ({ title, stats }) => (
     </ul>
   </section>
 );
+
+Statistics.defaultProps = {
+  title: null,
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ),
+};
 
 export default Statistics;
