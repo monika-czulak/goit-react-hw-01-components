@@ -17,9 +17,25 @@
 }
 
 .item:not(:last-of-type) {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .avatar {
-    width: 80px;
+  width: 70px;
+}
+
+.offline,
+.online {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.online {
+  background-color: rgb(50, 146, 50);
+}
+
+.offline {
+  background-color: rgb(213, 43, 43);
 }
