@@ -1,8 +1,6 @@
 .statistics {
   background-color: #fff;
   margin: 50px;
-  width: auto;
-  display: inline-block;
   border-radius: 5px;
   box-shadow: 1px 1px 5px rgb(138, 132, 132);
   color: #fff;
@@ -25,17 +23,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   align-items: center;
-  background-color: rgb(123, 68, 68);
   width: 100px;
   height: 80px;
 }
 
-.item:not(:last-of-type) {
-  border-right: 2px solid #d4d6eb;
-}
-
 .percentage {
   font-size: 26px;
+  font-weight: 500;
 }

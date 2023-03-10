@@ -1,0 +1,25 @@
+.list {
+  margin: 50px;
+  width: 80%;
+  max-width: 350px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgb(138, 132, 132);
+  background-color: #fff;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.item:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 80px;
+}
