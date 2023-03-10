@@ -28,7 +28,7 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
 FriendList.propTypes = {
     friends: PropTypes.arrayOf(
       PropTypes.shape({
-        key: PropTypes.string,
+        id: PropTypes.number,
         isOnline: PropTypes.bool,
         avatar: PropTypes.string,
         name: PropTypes.string
