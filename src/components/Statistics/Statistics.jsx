@@ -1,8 +1,10 @@
 import styles from './Statistics.module.css';
 import PropTypes from 'prop-types';
 
-const getRandomHexColor = () => {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+const getRandomColor = () => {
+  const hue = Math.random() * 360;
+  const randomColor = `hsl(${hue}, 50%, 50%)`
+  return randomColor;
 };
 
 const Statistics = ({ title, stats }) => (
@@ -13,7 +15,7 @@ const Statistics = ({ title, stats }) => (
         <li
           className={styles.item}
           key={stat.id}
-          style={{ backgroundColor: getRandomHexColor() }}
+          style={{ backgroundColor: getRandomColor() }}
         >
           <span className={styles.label}>{stat.label}</span>
           <span className={styles.percentage}>{stat.percentage}%</span>
@@ -22,10 +24,6 @@ const Statistics = ({ title, stats }) => (
     </ul>
   </section>
 );
-
-Statistics.defaultProps = {
-  title: null,
-};
 
 Statistics.propTypes = {
   title: PropTypes.string,
